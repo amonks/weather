@@ -4,6 +4,7 @@ x = $('#demo');
 function getForecast(forecastIOKey, position) {
 	url = "https://api.forecast.io/forecast/" + forecastIOKey + "/" + position.latitude + "," + position.longitude;
     out = Bouncer.get(url);
+    console.log(url);
     return out;
 }
 
