@@ -23,7 +23,7 @@ Weather = {
 
     getLocation: function() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(doWeather, Weather.showError);
+            navigator.geolocation.getCurrentPosition(Weather.doWeather, Weather.showError);
         } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
         }
