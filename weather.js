@@ -4,6 +4,11 @@ Weather = {
 
     forecastIOKey: "0ea12a6cd58c887c14ebd67679e11701",
 
+    get: function() {
+        Weather.getLocation;
+        return cloudCover;
+    }
+
     showCloudCover: function(cloudCover) {
         x.text( cloudCover );
     },
