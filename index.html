@@ -6,14 +6,24 @@
 </head>
 
 <body>
-    <canvas id="demo" width="100%" height="100%"></canvas>
+    <canvas id="canvas" width="100%" height="100%"></canvas>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://b.ss.cx/b.ss.cx.min.js"></script>
     <script src="weather.js"></script>
 
     <script>
+	canvas = document.getElementById("canvas");
+    canvas.width = document.body.clientWidth; //document.width is obsolete
+    canvas.height = document.body.clientHeight; //document.height is obsolete
+    canvasW = canvas.width;
+    canvasH = canvas.height;
 
+    if( canvas.getContext )
+    {
+        setup();
+        setInterval( run , 33 );
+    }
     </script>
 </body>
 
