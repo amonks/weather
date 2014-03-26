@@ -7,7 +7,7 @@ Weather = {
     forecastIOKey: "0ea12a6cd58c887c14ebd67679e11701",
 
     get: function() {
-        Weather.getLocation;
+        Weather.getLocation();
     },
 
     getForecast: function(position) {
@@ -30,6 +30,7 @@ Weather = {
         out = Weather.getForecast(position.coords).response;
         weather = JSON.parse(out);
         $("#data").text(weather.currently.cloudCover);
+        return weather.currently.cloudCover;
     },
 
     showError: function(error) {
