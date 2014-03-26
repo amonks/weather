@@ -2,7 +2,7 @@ var forecastIOKey = "0ea12a6cd58c887c14ebd67679e11701";
 x = $('#demo');
 
 function showCloudCover(weather) {
-    x.innerHTML = weather.currently.cloudCover.to_s;
+    x.text( weather.currently.cloudCover.to_s );
 }
 
 function getForecast(forecastIOKey, position) {
