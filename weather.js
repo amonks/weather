@@ -1,4 +1,4 @@
-var x = $("#data");
+var x = $("#console");
 
 Weather = {
 
