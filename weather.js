@@ -2,16 +2,12 @@ var x = $("#data");
 
 Weather = {
 
-    cloudCover: null,
-
     isLoaded: false,
 
     forecastIOKey: "0ea12a6cd58c887c14ebd67679e11701",
 
     get: function() {
         Weather.getLocation;
-        console.log(Weather.cloudCover);
-        return Weather.cloudCover;
     },
 
     getForecast: function(position) {
@@ -33,7 +29,7 @@ Weather = {
     doWeather: function(position) {
         out = Weather.getForecast(position.coords).response;
         weather = JSON.parse(out);
-        Weather.cloudCover = weather.currently.cloudCover;
+        $("#data").text(weather.currently.cloudCover);
     },
 
     showError: function(error) {
