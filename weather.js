@@ -1,8 +1,8 @@
 var forecastIOKey = "0ea12a6cd58c887c14ebd67679e11701";
 x = $('#demo');
 
-function showCloudCover(weather) {
-    x.text( weather.currently.cloudCover );
+function showCloudCover(cloudCover) {
+    x.text( cloudCover );
 }
 
 function getForecast(forecastIOKey, position) {
@@ -23,7 +23,9 @@ function getLocation() {
 function getWeather(position) {
     out = getForecast(forecastIOKey, position.coords).response;
     weather = JSON.parse(out);
-    showCloudCover(weather);
+    cloudCover = weather.currently.cloudCover;
+    console.log(cloudCover);
+    showCloudCover(cloudCover);
 }
 
 function showError(error) {
