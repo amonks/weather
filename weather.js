@@ -31,7 +31,6 @@ Weather = {
         out = Weather.getForecast(position.coords).response;
         weather = JSON.parse(out);
         var cloudCover = weather.currently.cloudCover;
-        console.log(cloudCover);
     },
 
     showError: function(error) {
