@@ -63,12 +63,13 @@ Weather = {
 
         imageObj.onload = function() {
 
-        for (var xI = canvasX - 1; xI >= 0; xI--) {
-            if (xI % Weather.grid === 0) {
-                context.drawImage(imageObj, xI, 100);
-            }
+            for (var xI = canvasX - 1; xI >= 0; xI--) {
+                if (xI % Weather.grid === 0) {
+                    context.drawImage(imageObj, xI, 100);
+                };
+            };
         };
         imageObj.src = 'cloud.png';
-    }
+    },
 
-}
+};
