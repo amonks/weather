@@ -7,7 +7,7 @@ Weather = {
     get: function() {
         Weather.getLocation;
         return cloudCover;
-    }
+    },
 
     showCloudCover: function(cloudCover) {
         x.text( cloudCover );
