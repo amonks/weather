@@ -2,7 +2,7 @@ var x = $("#data");
 
 Weather = {
 
-    cloudCover: null;
+    cloudCover: null,
 
     isLoaded: false,
 
