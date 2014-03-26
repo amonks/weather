@@ -68,7 +68,7 @@ Weather = {
                     for (var yI = canvasX - 1; yI >= 0; yI--) {
                         if (yI % Weather.grid === 0) {
                             if (Math.random() <= cloudCover) {
-                                context.drawImage(imageObj, xI, 100);
+                                context.drawImage(imageObj, xI, xY);
                             };
                         };
                     };
