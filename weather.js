@@ -2,7 +2,7 @@ var x = $("#console");
 
 Weather = {
 
-    isLoaded: false,
+    grid: 100,
 
     forecastIOKey: "0ea12a6cd58c887c14ebd67679e11701",
 
@@ -14,7 +14,6 @@ Weather = {
     	url = "https://api.forecast.io/forecast/" + Weather.forecastIOKey + "/" + position.latitude + "," + position.longitude;
         console.log("fetching weather from " + url);
         out = Bouncer.get(url);
-        Weather.isLoaded = true;
         return out;
     },
 
@@ -30,6 +29,7 @@ Weather = {
         out = Weather.getForecast(position.coords).response;
         weather = JSON.parse(out);
         $("#data").text(weather.currently.cloudCover);
+        makeClouds(weather.currently.cloudCover);
         return weather.currently.cloudCover;
     },
 
@@ -49,4 +49,26 @@ Weather = {
                 break;
         }
     },
+
+    makeClouds: function(cloudCover)  {
+        var canvas = document.getElementById("canvas");
+        canvas.width = document.body.clientWidth; //document.width is obsolete
+        canvas.height = document.body.clientHeight; //document.height is obsolete
+        canvasX = canvas.width;
+        canvasY = canvas.height;
+
+        var context = canvas.getContext('2d');
+
+        var imageObj = new Image();
+
+        imageObj.onload = function() {
+
+        for (var xI = canvasX - 1; xI >= 0; xI--) {
+            if (xI % Weather.grid === 0) {
+                context.drawImage(imageObj, xI, 100);
+            }
+        };
+        imageObj.src = 'cloud.png';
+    },
+
 }
