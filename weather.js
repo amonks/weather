@@ -69,6 +69,6 @@ Weather = {
             }
         };
         imageObj.src = 'cloud.png';
-    },
+    }
 
 }
