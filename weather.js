@@ -22,7 +22,7 @@ Weather = {
         } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
         }
-    }
+    },
 
     doWeather: function(position) {
         out = Weather.getForecast(position.coords).response;
