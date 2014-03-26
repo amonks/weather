@@ -29,7 +29,7 @@ Weather = {
         out = Weather.getForecast(position.coords).response;
         weather = JSON.parse(out);
         $("#data").text(weather.currently.cloudCover);
-        makeClouds(weather.currently.cloudCover);
+        Weather.makeClouds(weather.currently.cloudCover);
         return weather.currently.cloudCover;
     },
 
