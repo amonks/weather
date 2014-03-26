@@ -1,3 +1,5 @@
+x = $("#data");
+
 Weather = {
 
     isLoaded: false,
@@ -7,10 +9,6 @@ Weather = {
     get: function() {
         Weather.getLocation;
         return cloudCover;
-    },
-
-    showCloudCover: function(cloudCover) {
-        x.text( cloudCover );
     },
 
     getForecast: function(position) {
@@ -34,7 +32,6 @@ Weather = {
         weather = JSON.parse(out);
         var cloudCover = weather.currently.cloudCover;
         console.log(cloudCover);
-        Weather.showCloudCover(cloudCover);
     },
 
     showError: function(error) {
