@@ -2,7 +2,7 @@ var x = $("#console");
 
 Weather = {
 
-    grid: 100,
+    grid: 40,
 
     forecastIOKey: "0ea12a6cd58c887c14ebd67679e11701",
 
