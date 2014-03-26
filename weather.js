@@ -10,6 +10,7 @@ Weather = {
 
     get: function() {
         Weather.getLocation;
+        console.log(Weather.cloudCover);
         return Weather.cloudCover;
     },
 
