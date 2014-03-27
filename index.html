@@ -5,48 +5,67 @@
     <title>It&#8127;s Cloudy?</title>
     <style>
     html, body, a, a:visited {
-    	height: 100%;
-    	width: 100%;
-    	margin: 0;
-    	padding: 0;
-    	background: #3fbfff;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #3fbfff;
         font-family: sans-serif;
         font-weight: bold;
         color: #000000;
         text-decoration: none;
     }
     #info {
-    	background: #ffffff;
-    	position: absolute;
-    	top: 5px;
-    	left: 5px;
-    	width: 10px;
-    	height: 10px;
+        background: #ffffff;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
     }
     #loading {
-    	margin-left: auto;
-    	margin-right: auto;
-    	width: 32px;
-    	height: 32px;
-    	margin-top: 15%;
-    	z-index: -3;
+        margin-left: auto;
+        margin-right: auto;
+        width: 32px;
+        height: 32px;
+        margin-top: 15%;
+        z-index: -3;
     }
     </style>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-37834146-1', 'monks.co');
+    ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
-	<div id="info"><a href="http://monks.co#cloudy">?</a></div>
-	<div id="loading"><img src="ajax-loader.gif" alt="loading..."></div>
+    <div id="info"><a href="http://monks.co#cloudy">?</a>
+    </div>
+    <div id="loading">
+        <img src="ajax-loader.gif" alt="loading...">
+    </div>
 
     <canvas id="canvas" width="100%" height="100%"></canvas>
     <div id="console"></div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://b.ss.cx/b.ss.cx.min.js"></script>
     <script src="weather.min.js"></script>
 
     <script>
-    	Weather.get();
+    Weather.get();
     </script>
 </body>
 
